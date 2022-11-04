@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //객체 (object)
+        //여러개의 데이터를 속성 & 값 저장
+        //{} 객체를 감쌀때
+
+        // 1.객체 저장
+        let person={ 
+            name: '정충원',
+            subject:'역사',
+            intro: function(){
+                  console.log('고기 좋다 채소싫다 안녕하세요 여러분 동두천의 아들 정충원입니다. ')
+            }
+          
+        //객체 안에다가 작성할때는 애로우 펑션이 사용되지 않는다(확실한거 아님)
+
+        }
+        console.log(person)
+        // 2. 객체 내 데이터 접근 : .(dot)기호 사용
+        //객체 이름. 속성이름
+        console.log(person.name)
+        //console.log(person.intro)
+        person.intro()
+        // console.log가 아니라 함수를 객체 안에 넣은 것이므로 person.intro()로 호출하여야 한다.
+
+        //** 객체 내에 객체 저장
+        let IoTClass={
+            cyk :{
+                name: '최운규'
+            },
+            mjh :{
+                name:' 문지환'
+            },
+        }
+        console.log(IoTClass.mjh.name)
+
+        // ** 데이터를 볼때!
+        // {} => 객체 => 안에 접근 .(dot)
+        // [] => 배열 => 인덱스로 접근
+    </script>
+</body>
+</html>

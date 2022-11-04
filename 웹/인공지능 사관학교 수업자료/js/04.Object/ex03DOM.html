@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="text">Hello, World!</p>
+<button onclick="innerFunc()">Click!</button>
+<script>
+    let innerFunc=()=>{
+        let pTag=document.getElementById('text')
+        // 요소 = 태그 + 컨텐츠
+
+        // 요소 안의 내용만 수정 or 접근? .innerText
+        //(1) 접근 
+
+        console.log(pTag.innerText)
+        //(2) 수정 
+        pTag.innerText='<h1>수정완료!</h1>'
+
+        //태그 까지 적용하고 싶을 때는? .innerHTML
+        pTag.innerHTML='<h1>수정완료</h1>'
+    }
+</script>
+</body>
+</html>

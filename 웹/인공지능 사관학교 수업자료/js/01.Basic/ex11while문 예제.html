@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //1. 랜덤한 수를 하나 뽑아 준다
+        let ranNum=parseInt(Math.random()*100+1)
+        //console.log(praseInt(Math.random()*100+1))
+
+        //2.사용자한테 숫자를 입력받아준다. 
+        let num= Number(prompt('입력하십시요'))
+        //3.랜덤 게임 제작
+        while(true){
+            if (num <ranNum){
+               
+                num=Number(prompt('작은데용 다시 해봐영'))
+            }else if(num>ranNum) {
+                num= num=Number(prompt('큰대용 다시 해봐영'))
+
+            }else if(num==ranNum){
+                console.log('축하해용 맞았어용')
+                break
+            }
+            
+        }
+
+        
+        //-> 숫자 > 랜덤 팝업창 '입력한 숫자보다 작은 수 입니다.'
+        //->숫자> 랜덤 '입력한 숫자보다 큰 수입니다. '
+        // -> 숫자 =랜덤 '정답입니다. 축하합니다.!'
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>입력한 값을 h1태그로 출력해보기</h1>
+    <input type="text" id="txt">
+    <button onclick="data()">h1태그 출력</button>
+    <div id="div1"></div>
+
+    <script>
+        //1. innerText
+        //2. innerHtml
+        //3. value
+
+        // data라는 함수 생성 => 그 안에 로직짜기
+
+        //(1) 아이디가 txt인 input 태그 안의 값을 txt라는 변수 안에 담아준다
+        //(2) 아이디가 div1인 div태그 안에 사용자가 입력한 내용을 담아준다(단. h1 태그로)
+        //(3) 이때, 사용자가 입력한 내용은 누적된다. 
+        // ** 누적 연산자: +=
+
+
+        let data=()=>{
+            let txt= document.getElementById('txt').value
+            // div 태그 가져오기
+            let div1=document.getElementById('div1')
+            div1.innerHTML+=`<h1>${txt}</h1>`
+        }
+
+
+
+    </script>
+</body>
+</html>

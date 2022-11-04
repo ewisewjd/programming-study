@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 배열함수 
+        let list=[]
+
+        // 1. push()
+        //배열의 맨 마지막 인덱스의 데이터 넣기
+        list.push(5)
+        list.push('선영표')
+        console.log('push:' + list)
+
+        // 2. pop()
+        // 배열의 맨 마지막 인덱스 데이터 삭제
+        list.pop()
+        console.log('pop:'+list)
+        
+        // 3. unshift()
+        //배열의 맨 앞 인덱스에 데이터 넣기
+        list.unshift('홍성채')
+        console.log('unshift:'+list)
+
+        // 4. shift()
+        //배열의 맨 앞 인덱스 데이터 삭제
+        list.shift()
+        console.log('shift:'+list)
+
+        // 5. splice()
+        // 원하는 위치에 데이터 추가 or 삭제
+        // (1) 데이터 추가: splice(원하는 인덱스, 0(삭제 할 개수), 추가할 데이터)
+        list.splice(0,0,'나예호')
+        console.log('splice로 추가:'+list)
+
+        //(2) 데이터 삭제 : splice(원하는 인덱스 , 삭제할 개수)
+        list.splice(0,2)
+        console.log('splice로 삭제:'+list)
+
+        // 6.forEach문
+        let list2 = ['황해도','선영표','나예호','홍성채']
+
+        list2.forEach(function(item){
+            console.log(item)
+        })
+
+        // 7. at()
+        let res= list2.at(-1)
+        console.log(res)
+
+        // 8. 검색 
+        // 8-1 포함여부 알기 includes
+        list2.includes('최영화')
+        console.log(list2.includes('최영화'))
+
+        //8-2 내용이 포함되어있는 인덱스 indexOf
+        list2.indexOf('황해도')
+        console.log(list2.indexOf('황해도'))
+
+    </script>
+</body>
+</html>

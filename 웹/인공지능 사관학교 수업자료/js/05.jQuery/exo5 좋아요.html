@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <button id='like'>좋아요</button><span>0</span>
+    <br>
+    <input type="text"><button class='writeCom'>댓글작성</button>
+    <br>
+    <div id="com">
+        <p>첫댓글<button class='removeCom'>삭제</button></p>
+    </div>
+
+    <script>
+        //1, 2 => on('click')사용
+        //1. '좋아요'버튼을 눌렀을때, 0->1 /좋아요 -> 좋아요 취소
+        // => id를 dislike로 변경 
+
+        $(document).on('click','#like',()=>{
+            $('span').text('1')
+
+            $('#like')
+            .text('좋아요 취소')
+            .removeAttr('id')
+            .attr('id','dislike')
+            
+        })
+
+        //2. '좋아요 취소' 버튼을 눌렀을때, 1-> 0 / 좋아요 취소 -> 좋아요
+        // => id를 like로 변경 
+        
+        $(document).on('click','#dislike',()=>{
+           $('span').text('0')
+            $('#dislike')
+            .text('좋아요')
+            .removeAttr('id')
+            .attr('id','like')
+            
+        })
+
+        $
+
+        // 3. 댓글을 작성
+        // 내가 적은 댓글 + 삭제버튼
+        // 댓글을 작성한 후 => input 창은 비워줄것!
+        // 삭제 버튼 => 내가 삭제한 '그 댓글'만 지워줄 것!
+
+
+    </script>
+</body>
+</html>

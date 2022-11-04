@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. 사용자에게 두개의 숫자를 입력받아줌
+        //2. console창에 덧셈 뺄셈, 곱셈, 나눗셈에 대한 결과 출력 
+        // ex(3과 2의 덧셈은 ?)
+        // ex(3과 2의 뺄셈은 ?)
+        // 단 각각 4개의 함수를 만들것
+        //plus(), minus(),multi(),div()
+        //만약, 첫번째 숫자가 더 작다면 두번째 숫자 -,/첫번째 숫자 
+
+        let num1= parseInt(prompt('첫번째 숫자를 입력하세요'))
+        let num2= parseInt(prompt('두번째 숫자를 입력하세요'))
+
+        let plus=(num1,num2)=>{
+            console.log(num1+"와 "+num2+'의 덧셈은 '+(num1+num2))
+        }
+        plus(num1,num2)
+        let minus=(num1,num2)=>{
+            if (num1<num2){
+                return num2-num1
+            }else{
+                return num1-num2
+            }
+          
+        }
+        console.log(`${num1}와${num2}의 뺄셈은? ${minus(num1,num2)}`)
+        let multi=(num1,num2)=>{
+            console.log(num1+'와'+num2+'의 곱셈은?'+ (num1*num2))
+        }
+        multi(num1,num2)
+        let div=(num1,num2)=>{
+            if (num1<num2){
+                return num2/num1
+            }else{
+                return num1/15
+                3
+                num2
+            }
+        }
+        console.log(`${num1}와${num2}의 나눗셈 ${div(num1,num2)}`)
+
+
+    </script>
+</body>
+</html>
+
+

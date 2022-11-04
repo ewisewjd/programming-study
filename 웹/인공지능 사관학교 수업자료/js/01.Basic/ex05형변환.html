@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //형변환
+        let num='3.14'
+        console.log(num)
+
+        //1. 문자 -> 실수 parseFloat()
+        
+        console.log('실수로 형변환',parseFloat(num))
+
+        //2. 문자 -> 정수 parseInt()
+        let intNum= parseInt(num)
+        console.log('정수로 형변환',intNum)
+
+        //3. 문자 -> 숫자 number()
+        let num1= '1.234', num2='3'
+        console.log(Number(num1))
+        console.log(Number(num2))
+
+        //4. 숫자 -> 문자 Stirng()
+        let num3 = 45
+        String(num3)
+        console.log('문자로 형변환',String(num3))
+
+        // toString
+        console.log('문자로 형변환',num3.toString())
+
+    </script>
+    
+</body>
+</html>

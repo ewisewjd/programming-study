@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. python, 크롤링, web 세 과목의 점수를 입력받아줌
+        //=>입력창을 통한 입력문
+
+        //2. 1에서 입력받은 점수들로 총점, 평균, 등급을 구해줌
+        //2-1 단, 평균점수는 소수점 없이 출력되도록
+        //2-2 등급은 평균 점수를 기준으로 부여한다. 
+        //90점 이상 A, 80점 이상 B, 70 C, D 60
+        //그 외에는 F 로 설정해준다.
+
+        //3. 결과값 출력
+        //(당신의 평균은 XX 점이고, 당신의 등급은 X 등급입니다. )
+
+        let python= prompt('pyton'), 크롤링=prompt('crawling'), web=prompt('web')
+        let total=Number(python)+Number(크롤링)+Number(web)
+        let mean= parseInt(total/3)
+        let grade=""
+
+        if (mean>=90){
+            grade= 'A'
+        }else if (mean>=80){
+            grade='B'
+        }else if (mean>=70){
+            grade= 'C'
+        }else{
+            grade='F'
+        }
+
+        console.log('당신의 평균은 '+mean+'점이고, 당신의 등급은'+grade+'등급입니다')
+    </script>
+    
+</body>
+</html>

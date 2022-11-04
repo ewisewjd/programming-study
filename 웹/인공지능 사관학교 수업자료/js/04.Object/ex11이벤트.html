@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn"> 클릭 !</button>
+    <!-- 클릭 2 버튼을 눌렀을때 , console 창에 '클릭 2 실행 !'이라고 띄어 줄것! 단 두번 뜨지 않게 할것
+    또한 html문서를 절대 손대지 않을것 
+ 위쪽 클릭 버튼을 눌렀을 때 console에 아무것도 뜨지 않게 할것 -->
+
+    <p>
+        <button class="btn">클릭 2</button>
+    </p>
+    <script>
+        
+        // '이벤트 핸들러&리스너
+        // 어떤 이벤트가 발생했을때, 특정 함수를 실행해주는 구문
+        // addEventListner
+        //document.getElementsByClassName('btn')
+
+        // 콜백함수
+        // 1. 어떤 이벤트가 발생했거나, 특정 시점에 도달했을 때
+        // 내가 아닌, 시스템에서 호출해주는 함수
+        // 2. 함수 파라미터 안에 들어가는 함수=> 소괄호 안에 또 함수가 있다? 이건 콜백함수다.
+        document.querySelector('.btn').addEventListener('click',function(){
+            console.log('클릭되었습니다.')
+        })
+
+        document.querySelector('p>.btn').addEventListener('click',()=>{
+            console.log('click 2')
+        })
+
+    </script>
+</body>
+</html>

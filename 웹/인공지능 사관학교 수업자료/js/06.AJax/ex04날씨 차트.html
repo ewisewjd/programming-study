@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+</head>
+<body>
+    <h1>날씨 출력</h1>
+    <button onclick="getData()">데이터 가져오기 </button>
+    <canvas id="myChart" width="400px" height="400px"></canvas>
+
+    <script>
+        // 1. 날씨 데이터를 가져오기 =>ex01. movie.html참고
+        //http://api.openweathermap.org/data/2.5/weather?q=seoul&appid=1eb1d18602c0e2dde562cdc2005a4495&units=metric\
+        
+        //2. console 창에 현재 기온, 최고 기온, 최저기온을 가지고 올것
+        // 현재 기온temp, 최고기온 temp_max, 최저기온 temp_min
+
+        // 3.가지고 온 값을 그래프화 => ex03chart.html참고
+
+        let getData=()=>{
+        $.ajax({
+            url:"http://api.openweathermap.org/data/2.5/weather?q=seoul&appid=1eb1d18602c0e2dde562cdc2005a4495&units=metric",
+            type:"get",
+
+            success:function(res){
+                console.log(res)
+                console.log(res.main.temp)
+                console.log(res.main.temp_max)
+                console.log(res.main.temp_min)
+
+                const ctx = document.getElementById('myChart').getContext('2d');
+                const myChart = new Chart(ctx, {
+                
+                //차트의 형태 (bar,line,pie 등 )
+                type: 'bar',
+                data: {// 차트에 들어갈 데이터
+                    labels: ['현재기온', '최고기온','최저기온'],
+                    //labels: x축에 들어갈 데이터 
+                    datasets: [{
+                        label: '현재온도',//차트의 제목
+                        data: [res.main.temp, res.main.temp_max, res.main.temp_min],
+                        //x 축 labels에 대응 되는 데이터 값
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+});
+
+
+
+
+                
+
+            },
+
+            error: function(){
+                alert('실패인데용')
+            }
+        })
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        1. 직접 내가 가지고 있는 파일을 불러드리는 방법
+        2. 다른 서버에 있는 이미지 파일을 불러드리는 방법
+    -->
+    <!--1.폴더 속에 파일을 불러올때는 / 폴더 /폴더/파일 불러온다.
+        <img src="이미지/진짜이미지/img.jpg">
+    -->
+    
+    <!-- 2. 실행하는 html파일이 폴더 안에서 시작할때
+    <img src="..이미지/진짜이미지/img.jpg">
+-->
+    <!-- 3. 실행하는 html파일이 폴더안에 있을때 무조건 최상위(root)폴더로 가는 방법
+    -->
+    <img src="/이미지/진짜이미지/img.jpg">
+</body>
+</html>

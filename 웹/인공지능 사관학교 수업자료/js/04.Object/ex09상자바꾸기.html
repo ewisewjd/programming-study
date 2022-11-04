@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+        }
+        #redBox{
+            background-color: red;
+        }
+        #blueBox{
+            background-color: blue;
+        }
+        #greenBox{
+            background-color: green;
+        }
+        #grayBox{
+            background-color: gray;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="redBox"></div>
+    <div id="blueBox"></div>
+    <div id="greenBox"></div>
+    <div id="grayBox"></div>
+    <button onclick="margin()">이동하기!</button>
+    <button onclick="radius()">둥글게!</button>
+
+    <script>
+        //ver1 ID값을 이용
+        //ver2 TagName을 이용
+
+        //1. margin이라는 함수 생성 
+        //1-1 div 두번째 상자는 100px, 세번째 상자는 200px, 네번째 상자는 300px만큼 margin-left를 줄것
+        //1-2 TagNmame, for문을 이용하는데 어렵다면 => ID로 이용
+
+        let div = document.getElementsByTagName('div')
+        let margin=()=>{
+            for (i=1; i<div.length; i++){
+             div[i].style.marginLeft =i*100+'px'
+            }
+        }
+
+        //2.radius라는 함수를 생성 
+        //1-1 border-top-right-radius =>50%
+        //1-2 border-bottom-left-radius =>50%
+
+        let radius=()=>{
+            
+           for (i=0; i<div.length; i++){
+               div[i].style.borderTopRightRadius =50+'%'
+               div[i].style.borderBottomLeftRadius =50+'%'
+            }
+            
+       
+                
+            
+       }
+
+
+
+        // 이 때, JS 의 영역에서 CSS 속성을 적고싶다면
+        // Camel Case로 적을것
+        // (일반) border-top-right-radius
+        // (Camel) borderTopRightRadius
+    </script>
+</body>
+</html>
