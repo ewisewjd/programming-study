@@ -1,0 +1,23 @@
+import requests # URL 요청을 보내는 모듈 (slack한테 요청)
+import json # 클라이언트-서버가 통신하는 규율, 규격
+
+def get_google_news():
+    return "data"
+
+def send_slack_message():
+    bot_url = 'https://hooks.slack.com/services/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'
+
+    payload = {
+        "text" : get_google_news()
+    }
+
+    # get, post => CRUD
+    response = requests.post(
+        bot_url,
+        data=json.dumps(payload),
+        headers={ "Content-Type":"application/json" }
+    )
+
+    print(response)
+
+send_slack_message()
